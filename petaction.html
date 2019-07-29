@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Karma|Merriweather" rel="stylesheet">
+    <link rel="stylesheet" href="./css/action.css">
+    <title>Book The Pet</title>
+	
+<!--css of the 'petaction.html' page -->
+<style>
+	body {
+    margin:0;
+    font-family: 'Merriweather', serif;
+    color: rgb(54, 54, 54);
+    background: #f3f3f3;
+	}
+	
+	form {
+    width: 25%;
+    margin: 10px 35%;
+    text-align: center;
+    border-radius: 10px;
+    background: white;
+    padding: 1px 2.5% 20px 2.5%;
+    border: 1px solid #4285F4;
+    }
+	
+	#pet-item {
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    text-transform: capitalize;
+	}
+	
+	input {
+    border-radius: 5px;
+    width: 90%;
+    margin: 0 3%;
+    padding: 10px 2%;
+    border: 1px solid #0F9D58;
+	}
+	
+	.last {
+    background: #53c68c;
+    font-size: 28px;
+    letter-spacing: 1px;
+    border: 2px solid;
+	border-radius : 20px;
+    cursor: pointer;
+    width: 100%;
+	height: 50px;
+	}
+	
+	.grand-total {
+    width: 50%;
+    margin: 0 5%;
+    font-size: 18px;
+	}
+	
+<!-- to make the webpage responsive -->
+@media only screen and (max-width:720px) {
+	.last{
+			width:100%;
+			font-size:13px;
+	}
+	.pet1{
+			font-size: 20px;
+	}
+	
+
+}
+@media screen and ( max-width: 720px)
+{
+	.petaction form{
+					width:50%;
+					margin-left:23%;
+					
+		}
+}
+@media screen and ( max-width: 500px)
+{
+	.petaction form{
+					width:70%;
+					margin-left:13%;
+					
+		}
+}
+@media screen and ( min-width: 767px  max-width:1100px) 
+{
+	.petaction form{
+					width:70%;
+					margin-left:13%;
+					font-size:30px;
+					
+		}
+		.petaction input[type="text"]{
+				height:60px;
+				font-size:30px;
+		}
+		.petaction input[type="number"]{
+				height:60px;
+				font-size:30px;
+		}
+		.petaction input[type="email"]{
+				height:60px;
+				font-size:30px;
+		}
+		.petaction input[type="text"]{
+				height:60px;
+				font-size:30px;
+		}
+		.grand-total div{
+							font-size:40px;
+		}
+		.grand-total span{
+							font-size:40px;
+		}
+		.pet2{
+				font-size:50px;
+		}
+		.last{
+			width:100%;
+			font-size:30px;
+			height:80px;
+	}
+		}
+		
+		</style>
+
+</head>
+
+<body>
+<center><h1 class="pet2">LogIn form to BUY</h1><center>
+<div class = "petaction">
+<div>
+<!-- "petaction "form -->
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+        <h2 id="pet-item" class="pet1"></h2>
+        <input type="text" placeholder="Full Name" name="name" required><br>
+        <br><input type="number" placeholder="Phone Number" name="phone" pattern="[0-9]{10}" required><br>
+		<br><input type="email" placeholder="E-mail id" name="email" required><br>
+		<br><input type="text" placeholder="State" name="address" required><br>
+		<br><input type="number" placeholder="Pin code" name="name" pattern="[0-9]{6}" required><br>
+        <div class="grand-total">
+            <br><div>Grand Total : </div><span id="price"></span>
+        </div>
+		</br>
+	<button class="last">Place Order</button>
+    </form>
+	</div>
+	</div>
+    
+    <script>
+
+ 	var params = (new URL(document.location)).searchParams;
+        var pet_item = params.get("pet-item");
+        var price;
+        var pet_obj_array = [{
+            pet_item: "LABRADOR",
+            price: 3699
+        }, {
+            pet_item: "ALSATIAN",
+            price: 4499
+        }, {
+            pet_item: "BLACK LABRADOR",
+            price: 3499
+        }, {
+           pet_item: "MACAW",
+            price: 1000
+        }, {
+            pet_item: "Kittens(5)",
+            price: 1100
+        }, {
+            pet_item: "DACHSHUND",
+            price: 3599
+        }, {
+            pet_item: "BEAGLE",
+            price: 2999
+        }, {
+            pet_item: "RABBIT",
+            price: 1599
+        }, {
+            pet_item: "RABBIT",
+            price: 1599
+        }, {
+            pet_item: "RABBIT",
+            price: 1699
+        }, {
+            pet_item: "PARROT",
+            price: 1199
+        }, {
+            pet_item: "PARROT",
+            price: 1050
+        }];
+
+        document.querySelector("#pet-item").textContent = pet_item;
+       pet_obj_array.forEach(function (elem) {
+            if (elem["pet_item"] == pet_item) {
+                price = elem["price"];
+            }
+        });
+        document.querySelector("#price").textContent = " Rs. " + price;
+	
+	function validateForm(){
+	//event.preventDefault();
+	alert("YOUR ORDER IS PLACED !");
+	return false;
+	}
+	
+    </script>
+	
+
+</body>
+
+</html>

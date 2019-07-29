@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<!Author Name :- MALAM SINGH>
+<!Date :- 09-Apr-2019>
+<! Aim :-  Commercial Website >
+<html>
+
+<head>
+
+<title>Online_Pet_Shop</title>
+<!-- metadata -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<style> 
+.mySlides {display:none;}
+
+footer {
+    width:100%;
+    margin: 150spx 0 0 7.5%;
+	background-color : #A0A09B;
+}
+body{
+	background-color : #f2f2f2;
+}
+.heading{
+	border : 3px solid ;
+	background-color : #9999ff;
+    border: dashed;
+}
+.text{
+	font-size : 35px;
+	text-shadow: 5px 3px #c2c2d6;
+	margin-top : 15px;
+}
+
+.pet-detail input:first-of-type {
+    padding: 5px 10px;
+    border: solid;
+    border-radius: 12px;
+    margin-top: 3px;
+    margin-left: 4px;
+    background:  #ffcc00;
+    color: black;
+    float: left;
+    text-transform: capitalize;
+}
+
+.pet-detail input:last-of-type {
+    display: none;
+}
+
+.pet-detail input:hover {
+    cursor: pointer;
+    background: #d9d9d9;
+}
+
+.pet-detail span {
+    font-size: 24px;
+    float: right;
+    margin-right: 4px;
+}
+
+.para1{
+	font-color : YELLOW;
+	font-size : 25px;
+
+	
+}
+
+	topnav {
+		position: fixed;
+		height: 25px;
+		width: 85vw;
+		padding: 20px 7.5vw;
+		z-index: 10;
+		background-color: white;
+		font-size: 25px;
+		border-bottom: 1px solid rgb(241, 241, 241);
+		box-shadow: 0 1px 1px #f1f1f1;
+	}
+
+	.topnav {
+	  overflow: hidden;
+	  background-color: #333;
+	}
+
+	.topnav a {
+	  float: left;
+	  display: block;
+	  color:  #f2f2f2;
+	  text-align: center;
+	  padding: 12px 92px;
+	  text-decoration: none;
+	  font-size: 30px;
+	}
+
+	.topnav a:hover{
+	  background-color: #4CAF50;
+	  color: black;
+	}
+	.active {
+	background-color: #4CAF50;
+	color: white;
+	}
+	
+.part-foot{
+	font-size : 30px;
+	font-color : YELLOW;
+}
+
+.part-blog{
+	font-size : 20px;
+	font-color : #DBFF33;
+}
+	
+
+.small-card {
+    margin-bottom: 30px;
+	font-size : 25px;
+	font-color : #DBFF33;
+}
+
+.small-card img {
+    float: center;
+    height: 150px;
+	width:200px;
+    margin-right: 15px;
+}
+
+#one{
+	font-size: 25px; 
+}
+
+.container {
+    width: 85%;
+    margin-left: 7.5%;
+    position: relative;
+    top: 110px;
+}
+.card {
+    width: 31.33%;
+	height : 500px;
+    margin: 35px 0.62%;
+    text-align: center;
+    display: inline-grid;
+	border : 2px;
+    border-radius: 2px;
+    borderstyle: solid;
+	background-color: #661400;
+	border-radius: 15px;
+}
+.card img {
+    width: 98%;
+	height:250px;
+	border : solid;
+	border-color : #ff3333;
+	border-radius : 15px;
+}
+h3 {
+    font-size: 30px;
+    font-weight: 400;
+	font-color:BLACK;
+}
+h2 {
+    font-size: 35px;
+	font-style : italic;
+	font-color: GREEN;
+}
+
+	.tag {
+		background-color:  #bfbfbf;
+		color: white;
+		padding: 5px 8px;
+		margin: 3px;
+		width: fit-content;
+		display: inline-grid;
+		font-size: 20px;
+	}
+	
+p{
+	font-size : 18px;
+	font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+.con{
+	font-size : 25px;
+}
+
+<!-- to make the webpage responsive -->
+@media only screen and(max-width:1120px){
+	.head img{
+	width:25%;
+	}
+}
+	
+@media screen and (max-width:500px) {
+  .topnav{
+    width:100%; 
+  
+  }
+ .part-foot{
+	font-size:12px;
+ }
+}
+
+@media screen and (max-width:500px) {
+  .h1{
+    width:100%; 
+  }
+}
+
+@media screen and (max-width:500px) {
+  .card{
+    width:100%; 
+  }
+}
+
+</style>
+	
+
+</head>
+
+<body>
+<div class="head">
+<div class = "heading" >
+<center><h1><b><p class="text">PET BAZAAR</b></p></h1></center>
+</div>
+</div>
+<hr>
+<!-- nav bar -->
+<div class="topnav">
+  <a href="#home" class="active">Home</a>
+  <a href="#one">Contact</a>
+  <a href="https://www.animalhumanesociety.org/pet-helpline" target="_blank">Help</a>
+</div>
+
+<br/>
+
+<!-- slide-show images -->
+<div class="w3-container">
+<div class="w3-content w3-display-container">
+
+<div class="w3-display-container mySlides">
+  <img src="media/1.jpg" style="width:100%">
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="media/2.jpg" style="width:100%">
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="media/3.png" style="width:100%">
+</div>
+
+</div>
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+</div>
+
+<script>
+
+<!-- slide show code-->
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+
+<div class="container">
+
+        <section class="pet">
+<h1>Have a look on some of the available pets in our store !</h1>
+            <!-- every food-card is represented by 'card' class -->
+            <div class="card">
+                <img src="media/labrador.jpg" height="200px"; width="200px">
+				<form action="./petaction.html" method="GET" class="pet-detail" target="_blank">
+				    <input type="submit" value="BUY NOW">
+					<input type="text" name="pet-item" value="LABRADOR">
+                    <p style="color:white;"><span class="price">Rs. 3699</span></p>
+                </form>
+                <h3 style="color:white;"><u>LABRADOR</u></h3>
+                <p style="color:white;" style="font-size:5vw;">Happily, Labradors are not known to be aggressive dogs.In fact,they are generally known for having a friendly and patient personality which makes them a great family dog.</p>
+            </div>
+
+            <div class="card">
+                <img src="media/alsatian.jpg" height="200px"; width="200px">
+				<form action="./petaction.html" method="GET" class="pet-detail" target="_blank">
+                      <input type="submit" value="BUY NOW">
+					  <input type="text" name="pet-item" value="ALSATIAN">
+					<p style="color:white;"><span class="price">Rs. 4499</span></p>
+                </form>
+                <h3 style="color:white;"><u>ALSATIAN(German Shepherd)</u></h3>
+                <p style="color:white;" style="font-size:5vw;">German Shepherd or Alsatian serve as an ideal family dog. They are considered as good house dogs because of their calm nature and caring temperament. </p>
+            </div>
+
+            <div class="card">
+                <img src="media/labradorblack.jpg" height="200px"; width="200px">
+				<form action="./petaction.html" method="GET" class="pet-detail" target="_blank">
+                      <input type="submit" value="BUY NOW">
+					  <input type="text" name="pet-item" value="BLACK LABRADOR">
+                    <p style="color:white;"><span class="price">Rs. 3499</span></p>
+                </form>
+                <h3 style="color:white;"><u>BLACK LABRADOR </u></h3>
+                <p style="color: white;" style="font-size:5vw;">Black Labradors are naturally intelligent, meaning they respond well to obedience training and they are great with children.</p>
+            </div>
+
+            <div class="card">
+                <img src="media/macau.jpg" height="200px"; width="200px">
+				<form action="./petaction.html" method="GET" class="pet-detail" target="_blank">
+                      <input type="submit" value="BUY NOW">
+					  <input type="text" name="pet-item" value="MACAW">
+                    <p style="color:white;"><span class="price">Rs. 1000</span></p>
+                </form>
+                <h3 style="color:white;"><u>MACAW</u></h3>
+                <p style="color:white;" style="font-size:5vw;">They do have the ability to say words and mimic our speech.Because they are so intelligent, macaws can be trained.</p>
+            </div>
+
+            <div class="card">
+                <img src="media/kittens.jpg" height="200px"; width="200px">
+				<form action="./petaction.html" method="GET" class="pet-detail" target="_blank">
+                     <input type="submit" value="BUY NOW">
+					 <input type="text" name="pet-item" value="Kittens(5)">
+                    <p style="color:white;"><span class="price">Rs. 1100</span></p>
+                </form>
+                <h3 style="color:white;"><u>KITTENS</u></h3>
+                <p style="color:white;">Dogs may be man's best friend, but cats can be just as protective of humans as their canine counterparts.</p>
+            </div>
+
+            <div class="card">
+                <img src="media/dachshund.jpg" height="200px"; width="200px">
+				<form action="./petaction.html" method="GET" class="pet-detail" target="_blank">
+                      <input type="submit" value="BUY NOW">
+					  <input type="text" name="pet-item" value="DACHSHUND">
+                    <p style="color:white;"><span class="price">Rs. 3599</span></p>
+                </form>
+                <h3 style="color:white;"><u>DACHSHUND</u></h3>
+                <p style="color:white;">The standard-size dachshund was developed to scent, chase, and flush out badgers and other burrow-dwelling animals, while the miniature dachshund was bred to hunt smaller prey such as rabbits.</p>
+            </div>
+
+            <div class="card">
+                <img src="media/beagle.jpg" height="200px"; width="200px">
+				<form action="./petaction.html" method="GET" class="pet-detail" target="_blank">
+                      <input type="submit" value="BUY NOW">
+					  <input type="text" name="pet-item" value="BEAGLE">
+                    <p style="color:white;"><span class="price">Rs. 2999</span></p>
+                </form>
+                <h3 style="color:white;"><u>BEAGLE </u></h3>
+                <p style="color:white;">Beagles are incredibly curious and sweet dogs.They are terrific family dogs because they are good with children and are very playful.</p>
+            </div>
+			
+			<div class="card">
+                <img src="media/rabbit1.jpg" height="200px"; width="200px">
+				<form action="./petaction.html" method="GET" class="pet-detail" target="_blank">
+                      <input type="submit" value="BUY NOW">
+					  <input type="text" name="pet-item" value="RABBIT">
+                    <p style="color:white;"><span class="price">Rs. 1599</span></p>
+                </form>
+                <h3 style="color:white;"><u>RABBIT </u></h3>
+                <p style="color:white;">Rabbits make wonderful indoor pets. They are adorable and brimming with personality.</p>
+            </div>
+			
+			<div class="card">
+                <img src="media/rabbit2.jpg" height="200px"; width="200px">
+				<form action="./petaction.html" method="GET" class="pet-detail" target="_blank">
+                      <input type="submit" value="BUY NOW">
+					  <input type="text" name="pet-item" value="RABBIT">
+                    <p style="color:white;"><span class="price">Rs. 1599</span></p>
+                </form>
+                <h3 style="color:white;"><u>RABBIT </u></h3>
+                <p style="color:white;">Rabbits make wonderful indoor pets. They are adorable and brimming with personality.</p>
+            </div>
+			
+			<div class="card">
+                <img src="media/rabbit3.jpg" height="200px"; width="200px">
+				<form action="./petaction.html" method="GET" class="pet-detail" target="_blank">
+                      <input type="submit" value="BUY NOW">
+					  <input type="text" name="pet-item" value="RABBIT">
+                    <p style="color:white;"><span class="price">Rs. 1699</span></p>
+                </form>
+                <h3 style="color:white;"><u>BABY RABBITS(3)</u></h3>
+                <p style="color:white;">Rabbits make wonderful indoor pets. They are adorable and brimming with personality.</p>
+            </div>
+			
+			<div class="card">
+                <img src="media/parrot1.jpg" height="200px"; width="200px">
+				<form action="./petaction.html" method="GET" class="pet-detail" target="_blank">
+                      <input type="submit" value="BUY NOW">
+					  <input type="text" name="pet-item" value="PARROT">
+                    <p style="color:white;"><span class="price">Rs. 1199</span></p>
+                </form>
+                <h3 style="color:white;"><u>PARROT</u></h3>
+                <p style="color:white;">Parrot is not a shy bird, and does best with an owner who appreciates an outgoing companion that is not afraid to demand what it wants! Indian parrots can be quite talkative.</p>
+            </div>
+			
+			<div class="card">
+                <img src="media/parakeet.jpg" height="200px"; width="200px">
+				<form action="./petaction.html" method="GET" class="pet-detail" target="_blank">
+                     <input type="submit" value="BUY NOW"> 
+					  <input type="text" name="pet-item" value="PARAKEET">
+                    <p style="color:white;"><span class="price">Rs. 1050</span></p>
+                </form>
+                <h3 style="color:white;"><u>PARAKEET</u></h3>
+                <p style="color:white;">The Indian ring-necked parakeet, also called the rose-winged parakeet, has been kept as a pet for centuries and remains a favorite companion bird today. </p>
+            </div>
+			
+		</section>
+<p style="font-size:20px"; >Apart from the pets mentioned above, we have other renowned dog and parrot species which are quite less prevalent in India. We have our branch in pet hospitals with a batch of elite Vets around the country. We promise you to give you the best pets and all other required facilities for pet-care. </p>
+<p style="font-size:18px";>Co-powered and co-sponsored by the intl. pet selling company <a href="https://www.thesprucepets.com" target="_blank"><i>the Spruce Pets</i></a></p>
+ </div>
+</br></br></br></br>
+</br></br>
+<hr>
+<footer>
+<br>
+		
+        <div class="part-foot">
+			<hr/></br></br>
+            <center><h2><i><u>About us</u></i></h2></center>
+            <p class="para1"><b>We are continuously tethering with the market logistics whilst churning out the best deals for our site visitors. How we are able to provide you unearthly discounts on most popular dog and cat food brands, fish food and Aquarium supplies, is by simply erasing the cliched middle man and by passing the supply chain benefits directly to you.</b><br><br></p>
+
+        </div>
+ 
+            <h3><u>BLOG POSTS</u></h3>
+			</br>
+            <div class="small-card">
+                <a href="https://www.thesprucepets.com/hamsters-overview-1238973" target="_blank"><img src="media/hamster.jpg"></a>
+                <h4><i><u>Hamster</u></i></h4>
+                A popular pet in some parts of the world
+            </div>
+            <br>
+            <div class="small-card">
+                <a href="https://www.thesprucepets.com/facts-about-lovebirds-390823" target="_blank"><img src="media/lovebirds.jpg"></a>
+                <h4><i><u>Love birds(Pocket Parrot)</u></i></h4>
+                Small colourful birds, look-alike parrots
+            </div>
+
+
+<br>
+        <div class="part tags">
+            <h3>In partnership with <a href="https://www.thesprucepets.com" target="_blank">TheSprucePets</a></h3>
+            </br></br>
+			<h4>POPULAR TAGS</h4>
+
+            <!-- all tags are having class 'tag' -->
+            <div class="tag"><a href="https://www.thesprucepets.com/dog-breeds-4162141" target="_blank">dog</a></div>
+            <div class="tag"><a href="https://www.thesprucepets.com/indian-ringneck-parakeets-390503" target="_blank">parakeet</a></div>
+            <div class="tag"><a href="https://www.thesprucepets.com/rabbits-4162081" target="_blank">Rabbit</a></div>
+            <div class="tag"><a href="https://www.thesprucepets.com/best-natural-dog-foods-4155114" target="_blank">dog food</a></div>
+            <div class="tag"><a href="https://www.thesprucepets.com/puppies-4162145" target="_blank">pup care</a></div>
+            <div class="tag"><a href="https://www.thesprucepets.com/cat-breeds-4162123" target="_blank">cat</a></div>
+            <div class="tag"><a href="https://www.thesprucepets.com/how-to-care-for-puppies-1117475" target="_blank">pups</a></div>
+            <div class="tag"><a href="https://www.thesprucepets.com/kittens-4162104" target="_blank">kitty</a></div>
+            <div class="tag"><a href="https://www.thesprucepets.com/bird-breeds-4162096" target="_blank">Birds</a></div>
+            <div class="tag"><a href="https://www.thesprucepets.com/macaws-1239204" target="_blank">Macau</a></div>
+            <div class="tag"><a href="https://www.thesprucepets.com/pet-chickens-1238426" target="_blank">Hen-cock</a></div>
+            <div class="tag"><a href="https://www.thesprucepets.com/hamsters-4162083" target="_blank">Hamster</a></div>
+        </div>
+
+		
+		<hr/>
+		<center><h3><u>Contact us</u></i></h3></center>
+		<div class="con"><center>
+		<i>Tel. no. :- +9878411931 </i></br>
+		<a href="https://mail.google.com/mail/?tab=rm" target="_blank"><img src = "media/downloadmail.jpg" style = "height:30px; width:30px"></a>
+		</i>Gmail :- petbazar6000@gmail.com</i>
+		</center>
+		</div>
+		</br>
+		<hr/><hr/><hr/><hr/><hr/>
+	
+		
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+</body>
+</html>
